@@ -21,4 +21,8 @@ module Ranking::InstanceMethods
     scores[object] = value
     self
   end
+
+  def [](*args)
+    to_a[*args]
+  end
 end

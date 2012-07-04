@@ -81,4 +81,22 @@ describe Ranking::InstanceMethods do
       expect { @instance.score(:foo) }.to raise_error(ArgumentError)
     end
   end
+
+  describe "#[]" do
+    before(:each) do
+      @instance.score(:foo, 5).score(:bar, 4).score(:baz, 3).score(:qux,2)
+    end
+
+    it "indexes" do
+      @instance[1].should == :bar
+    end
+
+    it "slices with .." do
+      @instance[1..2].should == [:bar, :baz]
+    end
+
+    it "slices with ..." do
+      @instance[1...3].should == [:bar, :baz]
+    end
+  end
 end
