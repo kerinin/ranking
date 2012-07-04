@@ -4,6 +4,7 @@ gemspec
 
 group :development do
 
+  gem "pry"
   gem 'rubygems-tasks',  '~> 0.2'
   gem 'rdoc',  '~> 3.0'
   gem 'rspec',  '~> 2.4'

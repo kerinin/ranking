@@ -12,25 +12,15 @@ module Ranking::SetMethods
   end
 
   def ==(other)
-    other.kind_of?(Ranking) and other.scores == scores
+    other.kind_of?(Ranking) and other.scores == scores and super(other)
   end
 
   def ^(other)
     raise NotImplementedError
   end
 
-  def add(object)
-    scores[object] = 0
-    super object
-  end
-
-  def add?(object)
-    scores[object] = 0
-    super object
-  end
-
   def clear
-    scores = Hash.new(0)
+    @scores = Hash.new(0)
     super
   end
 
@@ -74,9 +64,7 @@ module Ranking::SetMethods
 
   def merge(enum)
     if enum.kind_of?(Ranking)
-      scores.merge!(enum.scores) do |k,old,new|
-        old + new
-      end
+      scores.merge!(enum.scores)
     end
 
     super enum
@@ -94,18 +82,12 @@ module Ranking::SetMethods
     raise NotImplementedError
   end
 
-  def subtract(enum)
-    enum.each do |other|
-      delete(other)
-    end
-  end
-
   def to_a
-    super.sort_by do |a,b|
+    super.sort do |a,b|
       if scores[a] == scores[b]
         a <=> b
       else
-        scores[a] <=> scores[b]
+        scores[b] <=> scores[a]
       end
     end
   end
