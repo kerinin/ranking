@@ -1,10 +1,8 @@
 # -*- encoding: utf-8 -*-
 
-require File.expand_path('../lib/ranking/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.name          = "ranking"
-  gem.version       = Ranking::VERSION
+  gem.version       = "0.0.0"
   gem.summary       = %q{Sorted sets using scores}
   gem.description   = %q{Extends Set with a score.  Sorts by score on #to_a, #each, etc}
   gem.license       = "MIT"

@@ -1,5 +1,3 @@
-require 'ranking/version'
-
 module Ranking::SetMethods
   def &(enum)
     raise NotImplementedError
@@ -79,10 +77,10 @@ module Ranking::SetMethods
   end
 
   def merge(enum)
-    raise NotImplementedError unless enum.kind_of?(Ranking)
-
-    scores.merge!(enum.scores) do |k,old,new|
-      old + new
+    if enum.kind_of?(Ranking)
+      scores.merge!(enum.scores) do |k,old,new|
+        old + new
+      end
     end
 
     super enum

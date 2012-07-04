@@ -1,11 +1,14 @@
 require 'set'
 
-require 'ranking/instance_methods'
-require 'ranking/set_methods'
+class Ranking < Set
+  VERSION = "0.0.0"
 
-class Ranking
+  require 'ranking/instance_methods'
+  require 'ranking/set_methods'
+
   include InstanceMethods
   include SetMethods
 
   attr_reader :scores
 end
+
