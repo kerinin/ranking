@@ -1,0 +1,28 @@
+= ranking
+
+* {Homepage}[https://github.com/kerinin/ranking#readme]
+* {Issues}[https://github.com/kerinin/ranking/issues]
+* {Documentation}[http://rubydoc.info/gems/ranking/frames]
+* {Email}[mailto:kerinin at gmail.com]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'ranking'
+
+== Requirements
+
+== Install
+
+  $ gem install ranking
+
+== Copyright
+
+Copyright (c) 2012 Ryan Michael
+
+See LICENSE.txt for details.
