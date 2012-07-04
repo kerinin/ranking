@@ -5,8 +5,8 @@ require File.expand_path('../lib/ranking/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = "ranking"
   gem.version       = Ranking::VERSION
-  gem.summary       = %q{TODO: Summary}
-  gem.description   = %q{TODO: Description}
+  gem.summary       = %q{Sorted sets using scores}
+  gem.description   = %q{Extends Set with a score.  Sorts by score on #to_a, #each, etc}
   gem.license       = "MIT"
   gem.authors       = ["Ryan Michael"]
   gem.email         = "kerinin@gmail.com"
