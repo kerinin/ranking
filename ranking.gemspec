@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |gem|
   gem.name          = "ranking"
-  gem.version       = "0.0.0"
+  gem.version       = "0.1.0"
   gem.summary       = %q{Sorted sets using scores}
   gem.description   = %q{Extends Set with a score.  Sorts by score on #to_a, #each, etc}
   gem.license       = "MIT"
