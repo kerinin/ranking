@@ -51,7 +51,9 @@ end
 
 ## Install
 
-  $ gem install ranking
+``` bundler
+gem 'ranking'
+```
 
 ## Copyright
 
