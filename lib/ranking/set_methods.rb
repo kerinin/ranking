@@ -64,10 +64,6 @@ module Ranking::SetMethods
     raise NotImplementedError
   end
 
-  def initialize_copy(orgi)
-    raise NotImplementedError
-  end
-
   def inspect
     "<Ranking: #{to_a.map(&:inspect).join(', ')}>"
   end
